@@ -1,5 +1,6 @@
 package com.example.studentwsb.blogproject;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     // zalogowany
                     Toast.makeText(MainActivity.this, "Logged in", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(MainActivity.this, PostListActivity.class));
                 } else {
                     Toast.makeText(MainActivity.this, "Not logged in", Toast.LENGTH_LONG).show();
 
